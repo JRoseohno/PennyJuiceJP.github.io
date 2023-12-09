@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shop Penny Juice</title>
+    <meta name="author" content="Your Name">
+    <link rel="stylesheet" href="../CSS/mystyle.css">
+</head>
+<body>
+   <div class="hero">
+       <div class="navbar">
+           <img src="../IMG/PennyJuice.Logo.Final.png" alt="Penny Juice" width="130" height="180">
+           <ul>
+               <li><a href="../HTML/index.html">HOME</a></li>
+               <li><a href="../HTML/about.html">ABOUT</a></li>
+               <li><a href="../HTML/flavors.html">FLAVORS</a></li>
+               <li><a href="../HTML/shop.html"><b>SHOP</b></a></li>
+               <li><a href="../HTML/contact.html">CONTACT</a></li>
+           </ul>
+           <div class="right-navigation">
+                <a href="#">Sign In</a>
+                <a href="#">Cart</a>
+           </div>
+       </div>   
+   </div>
+   
+  <div class="grid-container">
+      <!-- Apple -->
+      <div class="grid-item">
+         <h2>Apple</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Apple.png" alt="Apple">
+      </div>
+      
+      <!-- Strawberry Banana -->
+      <div class="grid-item">
+         <h2>Strawberry Banana</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Strawberry.Banana.png" alt="Strawberry Banana">
+      </div>
+      
+      <!-- Strawberry Kiwi -->
+      <div class="grid-item">
+         <h2>Strawberry Kiwi</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Strawberry.Kiwi.webp" alt="Strawberry Kiwi">
+      </div>
+      
+      <!-- Grape -->
+      <div class="grid-item">
+         <h2>Grape</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Grape.png" alt="Grape">
+      </div>
+      
+      <!-- Peach Mango -->
+      <div class="grid-item">
+         <h2>Peach Mango</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Peach.Mango.png" alt="Peach Mango">
+      </div>
+      
+      <!-- Watermelon -->
+      <div class="grid-item">
+         <h2>Watermelon</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Watermelon.png" alt="Watermelon">
+      </div>
+      
+      <!-- Fruit Punch -->
+      <div class="grid-item">
+         <h2>Fruit Punch</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Fruit.Punch.png" alt="Fruit Punch">
+      </div>
+      
+      <!-- Pineapple -->
+      <div class="grid-item">
+         <h2>Pineapple</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Pineapple.png" alt="Pineapple">
+      </div>
+      
+      <!-- Orange -->
+      <div class="grid-item">
+         <h2>Orange</h2>
+         <div class="item-controls">
+            <button class="remove-item">-</button>
+            <span class="item-count">1</span>
+            <button class="add-item">+</button>
+         </div>
+         <img src="../IMG/Orange.png" alt="Orange">
+      </div>
+   </div>
+    
+    
+      <script>
+       document.addEventListener('DOMContentLoaded', function () {
+           var itemControls = document.querySelectorAll('.item-controls');
+
+           itemControls.forEach(function (controls) {
+               var addButton = controls.querySelector('.add-item');
+               var removeButton = controls.querySelector('.remove-item');
+               var itemCount = controls.querySelector('.item-count');
+
+               addButton.addEventListener('click', function () {
+                   var currentCount = parseInt(itemCount.textContent, 10);
+                   itemCount.textContent = currentCount + 1;
+               });
+
+               removeButton.addEventListener('click', function () {
+                   var currentCount = parseInt(itemCount.textContent, 10);
+                   itemCount.textContent = Math.max(currentCount - 1, 0);
+               });
+           });
+       });
+   </script>
+    
+    <div class="footer">
+        Copyright &copy; Penny Juice 2023
+    </div>
+</body>
+</html>
